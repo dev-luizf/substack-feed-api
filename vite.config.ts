@@ -2,10 +2,9 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
-    lib: {
-      entry: "./lib/main.ts",
-      name: "SubstackFeedAPI",
-      fileName: "substackFeedApi",
+    outDir: "dist",
+    rollupOptions: {
+      input: "./index.html", // Assuming you have an index.html as the entry point
     },
   },
 });
